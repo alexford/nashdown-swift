@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": [
+        "swift"
+      ],
+      "name": "Debug nashdown",
+      "program": "${workspaceFolder:Nashdown}/.build/debug/nashdown",
+      "args": [],
+      "cwd": "${workspaceFolder:Nashdown}",
+      "preLaunchTask": "swift: Build Debug nashdown"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": [
+        "swift"
+      ],
+      "name": "Release nashdown",
+      "program": "${workspaceFolder:Nashdown}/.build/release/nashdown",
+      "args": [],
+      "cwd": "${workspaceFolder:Nashdown}",
+      "preLaunchTask": "swift: Build Release nashdown"
+    }
+  ]
+}
