@@ -8,7 +8,7 @@ public let NDLinesParser = Parse(input: Substring.self) {
   }
 }
 
-public let NDLineParser = Parse(input: Substring.self, NDLine.init(items:)) {
+public let NDLineParser = Parse(input: Substring.self, NDLine.init(bars:)) {
   Many {
     NDBarParser
   } separator: {

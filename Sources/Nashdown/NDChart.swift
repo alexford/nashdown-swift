@@ -1,10 +1,10 @@
 public struct NDChart {
   public let title: String
-  public let lines: [Any]
+  public let lines: [NDLine]
 
-  public init(fromString nashdownString: String) {
+  public init(fromString nashdownString: String) throws {
     title = "A Song"
 
-    lines = try! NDLinesParser.parse(nashdownString)
+    lines = try NDLinesParser.parse(nashdownString)
   }
 }
