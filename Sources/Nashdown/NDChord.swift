@@ -4,6 +4,7 @@ public struct NDChord: Identifiable {
   public let degree: Int
   public let quality: NDChordQuality
   public let id = UUID()
+  public let notatedBeats: Int?
 
   public var isMinor: Bool {
     return self.quality == NDChordQuality.Minor
@@ -13,11 +14,10 @@ public struct NDChord: Identifiable {
     return !self.isMinor
   }
 
-  public init(_ degree: Int, _ quality: NDChordQuality) {
+  public init(_ degree: Int, _ quality: NDChordQuality, _ beats: Int? = nil) {
     self.degree = degree
-
-    // TODO
     self.quality = quality
+    self.notatedBeats = beats
   }
 }
 
